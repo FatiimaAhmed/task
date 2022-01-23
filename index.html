@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/apexcharts.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="container-fluid d-flex justify-content-between align-items-center p-2">
+        <div class="d-flex align-items-center">
+            <a href="#" class="logo">
+                logo
+            </a>
+            <div class="select dropdown ms-4">
+                <button class="btn-select btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Select company
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark w-100" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">company 1</a></li>
+                    <li><a class="dropdown-item" href="#">company 2</a></li>
+                    <li><a class="dropdown-item" href="#">company 3</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="user dropdown d-none d-md-block">
+            <a class="dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                john snow
+                <img src="https://via.placeholder.com/40x40/ffffff.png?text=JS" alt="user image"
+                    class="rounded-circle img-fluid user-img">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item" href="#">logout</a></li>
+            </ul>
+        </div>
+    </header>
+    <aside>
+        <div>
+            <a href="#" class="nav-item active py-2 mb-3">
+                <img src="./icons/grid.svg" class="img-fluid mb-2" alt="dashboard">
+                dashboard
+            </a>
+            <a href="#" class="nav-item py-2 mb-3">
+                <img src="./icons/home.svg" class="img-fluid mb-2" alt="corporates">
+                corporates
+            </a>
+            <a href="#" class="nav-item py-2 mb-3">
+                <img src="./icons/file-text.svg" class="img-fluid mb-2" alt="issues">
+                issues
+            </a>
+            <a href="#" class="nav-item py-2 mb-3">
+                <img src="./icons/share.svg" class="img-fluid mb-2" alt="graphs">
+                graphs
+            </a>
+            <a href="#" class="nav-item py-2 mb-3">
+                <img src="./icons/settings.svg" class="img-fluid mb-2" alt="settings">
+                settings
+            </a>
+        </div>
+    </aside>
+    <main class="h-100">
+        <section class="h-100 container-fluid">
+            <div class="h-100 row">
+                <div class="col-12 col-xl-4 col-xxl-3 pt-3">
+                    <div class="h-100 row px-0 px-xl-3 px-custome">
+                        <div class="col-12 col-md-6 col-xl-12 d-flex flex-column justify-content-between">
+                            <div class="text-center mb-3">
+                                <h1 class="fw-bold">asset <span>zero</span></h1>
+                                <p class="sub mb-0">Make data driven decisions to reduce syper risks.</p>
+                            </div>
+                            <div>
+                                <div class="select dropdown">
+                                    <button class="btn dropdown-toggle w-100 text-start" type="button" id="dropdownMenuButton1"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Company name
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-dark w-100" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">company 1</a></li>
+                                        <li><a class="dropdown-item" href="#">company 2</a></li>
+                                        <li><a class="dropdown-item" href="#">company 3</a></li>
+                                    </ul>
+                                </div>
+                                <div id="radial-chart" class="my-3"> </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-12">
+                            <div class="results">
+                                <p class="text-center pt-4 mb-0 pb-2">results for the period</p>
+                                <div class=" text-center period mx-auto py-1">
+                                    <img src="./icons/folder-outline 1.svg" width="16" class="img-fluid" alt="">
+                                    <span>10 jan 2021 - 7 feb 2021</span>
+                                </div>
+                                <div class="issues py-3">
+                                    <div class="issue issue-found px-2 mb-3">
+                                        <p>Issues found</p>
+                                        <div class="d-flex">
+                                            <div>
+                                                <span>errors</span>
+                                                <p class="fs-6">432</p>
+                                            </div>
+                                            <div class="mx-5 vertical-roller"></div>
+                                            <div>
+                                                <span>warnings</span>
+                                                <p class="fs-6">1250</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="issue issue-resolved px-2 mb-3">
+                                        <p>Issues resolved</p>
+                                        <div class="d-flex">
+                                            <div>
+                                                <span>errors</span>
+                                                <p class="fs-6">32</p>
+                                            </div>
+                                            <div class="mx-5 vertical-roller"></div>
+                                            <div>
+                                                <span>warnings</span>
+                                                <p class="fs-6 position-relative">175
+                                                    <span class="position-absolute translate-middle pos-1 badge rounded-pill custome-badge custome-badge-warning">
+                                                        +15
+                                                        <span class="visually-hidden">unread messages</span>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="issue issue-footprint px-2">
+                                        <p>Digital foot prints</p>
+                                        <span>Detected automatically</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-8 col-xxl-9">
+                    <div id="area-chart"></div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center py-4">
+                        <ul class="nav mb-3 mb-md-0">
+                            <li class="tab-item me-3">
+                                <a class="px-0 active" aria-current="page" href="#">Score</a>
+                            </li>
+                            <li class="tab-item">
+                                <a class="px-0" href="#">all issues</a>
+                            </li>
+                        </ul>
+                        <div class="date d-flex align-items-center">
+                            <p class="mb-0 me-2">Test date: </p>
+                            <div class=" text-center period py-0 px-2">
+                                <img src="./icons/folder-outline 1.svg" width="16" class="img-fluid" alt="">
+                                <span>10 jan 2021</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-xl-8 mb-3 mb-xl-0">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-3">
+                                <h5>current issues</h5>
+                                <div class="filters">
+                                    <span>quick filter: </span>
+                                    <button class="btn error-btn">errors</button>
+                                    <button class="btn warning-btn">warnings</button>
+                                    <button class="btn pass-btn">passed</button>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                                    <div
+                                        class="info info-err cutome-height py-3 d-flex flex-column justify-content-between">
+                                        <div class="">
+                                            <p class="">5.2</p>
+                                            <span>vurnabilties</span>
+                                        </div>
+                                        <div class="labels">
+                                            <span class="label-err">3</span>
+                                            <span class="label-warning">1</span>
+                                            <span class="label-pass">123</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                                    <div
+                                        class="info info-warning cutome-height py-3 d-flex flex-column justify-content-between">
+                                        <div class="">
+                                            <p class="">6.7</p>
+                                            <span>dark web mentions</span>
+                                        </div>
+                                        <div class="labels">
+                                            <span class="label-err">5</span>
+                                            <span class="label-warning">3</span>
+                                            <span class="label-pass">720</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                                    <div
+                                        class="info info-pass cutome-height py-3 d-flex flex-column justify-content-between">
+                                        <div class="">
+                                            <p class="">9.9</p>
+                                            <span>leaked credentials</span>
+                                        </div>
+                                        <div class="labels">
+                                            <span class="label-pass">345</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12 col-md-4 mb-3  mb-md-0">
+                                    <div
+                                        class="info info-warning cutome-height py-3 d-flex flex-column justify-content-between">
+                                        <div class="">
+                                            <p class="">7.9</p>
+                                            <span>network security</span>
+                                        </div>
+                                        <div class="labels">
+                                            <span class="label-warning">4</span>
+                                            <span class="label-pass">87</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                                    <div
+                                        class="info info-pass cutome-height py-3 d-flex flex-column justify-content-between">
+                                        <div class="">
+                                            <p class="">9.9</p>
+                                            <span>melware security</span>
+                                        </div>
+                                        <div class="labels">
+                                            <span class="label-pass">450</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                                    <div
+                                        class="info info-pass cutome-height py-3 d-flex flex-column justify-content-between">
+                                        <div class="">
+                                            <p class="">8.5</p>
+                                            <span>email security</span>
+                                        </div>
+                                        <div class="labels">
+                                            <span class="label-warning">1</span>
+                                            <span class="label-pass">221</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                                    <div
+                                        class="info info-pass cutome-height py-3 d-flex flex-column justify-content-between">
+                                        <div class="">
+                                            <p class="">9.9</p>
+                                            <span>DNS health</span>
+                                        </div>
+                                        <div class="labels">
+                                            <span class="label-warning">4</span>
+                                            <span class="label-pass">87</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                                    <div
+                                        class="info info-pass cutome-height py-3 d-flex flex-column justify-content-between">
+                                        <div class="">
+                                            <p class="">8.2</p>
+                                            <span>SSL/TLS security</span>
+                                        </div>
+                                        <div class="labels">
+                                            <span class="label-pass">345</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-4 mb-3 mb-xl-0">
+                            <div class="mb-3">
+                                <h5>descovered assets</h5>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-4 col-xl-12">
+                                    <div
+                                        class="info info-assets cutome-height py-3 d-flex flex-column justify-content-between position-relative mb-3">
+                                        <div class="">
+                                            <p class="position-relative d-inline-block">48
+                                                <span class="position-absolute translate-middle badge rounded-pill custome-badge pos-2 custome-badge-pass">
+                                                    +8
+                                                    <span class="visually-hidden">unread messages</span>
+                                                </span>
+                                            </p>
+                                            <span class="d-block">SSL</span>
+                                        </div>
+                                        <div class="chart">
+                                            <div id="ssl-line-chart"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-xl-12">
+                                    <div
+                                        class="info info-assets cutome-height py-3 d-flex flex-column justify-content-between position-relative mb-3">
+                                        <div class="">
+                                            <p class="">301</p>
+                                            <span>domain</span>
+                                        </div>
+                                        <div class="chart">
+                                            <div id="domain-line-chart"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-xl-12">
+                                    <div class="info info-assets cutome-height py-3 d-flex flex-column justify-content-between position-relative">
+                                        <div class="">
+                                            <p class="">79</p>
+                                            <span>ip</span>
+                                        </div>
+                                        <div class="chart">
+                                            <div id="ip-line-chart"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./dist/apexcharts.min.js"></script>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
